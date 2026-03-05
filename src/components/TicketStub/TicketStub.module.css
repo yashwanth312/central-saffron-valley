@@ -1,0 +1,75 @@
+.stub {
+  display: flex;
+  background-color: #FAF6EF;
+  border: 1px solid #C9A84C;
+  border-radius: 4px;
+  overflow: hidden;
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+  cursor: pointer;
+}
+
+.stub:hover {
+  box-shadow: 0 8px 24px rgba(25, 54, 94, 0.15);
+  transform: translateY(-2px);
+}
+
+.main {
+  flex: 1;
+  padding: 1rem 1.25rem;
+}
+
+.name {
+  font-family: var(--font-cormorant);
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #19365e;
+  letter-spacing: 0.05em;
+}
+
+.desc {
+  font-family: var(--font-baskerville);
+  font-size: 0.8rem;
+  color: #32373c;
+  margin-top: 0.25rem;
+}
+
+.route {
+  font-family: var(--font-special-elite);
+  font-size: 0.65rem;
+  color: #C9A84C;
+  letter-spacing: 0.1em;
+  margin-top: 0.5rem;
+  text-transform: uppercase;
+}
+
+.tear {
+  width: 3px;
+  background-image: repeating-linear-gradient(
+    to bottom,
+    transparent,
+    transparent 4px,
+    #C9A84C 4px,
+    #C9A84C 8px
+  );
+}
+
+.price {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 1.25rem;
+  background-color: #19365e;
+  color: #FAF6EF;
+  font-family: var(--font-special-elite);
+  font-size: 1rem;
+  min-width: 5rem;
+  text-align: center;
+}
+
+.priceStamp {
+  font-size: 0.6rem;
+  color: #C9A84C;
+  letter-spacing: 0.1em;
+  margin-top: 0.25rem;
+}
