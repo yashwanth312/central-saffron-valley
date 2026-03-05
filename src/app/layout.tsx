@@ -3,6 +3,7 @@ import { Cormorant_Garamond, Libre_Baskerville, Special_Elite } from 'next/font/
 import './globals.css'
 import { Navigation } from '@/components/Navigation/Navigation'
 import { Footer } from '@/components/Footer'
+import { ReservationBell } from '@/components/ReservationBell'
 
 const cormorant = Cormorant_Garamond({
   subsets: ['latin'],
@@ -34,6 +35,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Navigation />
         <div className="pt-[72px]">{children}</div>
         <Footer />
+        <ReservationBell />
       </body>
     </html>
   )
