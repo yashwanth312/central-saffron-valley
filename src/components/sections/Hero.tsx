@@ -1,6 +1,7 @@
 'use client'
 import Link from 'next/link'
 import { DepartureBoard } from '@/components/DepartureBoard/DepartureBoard'
+import { OrnamentalDivider } from '@/components/ui/OrnamentalDivider'
 import { menu } from '@/data/menu'
 
 const boardItems = menu
@@ -57,5 +58,3 @@ export function Hero() {
     </section>
   )
 }
-
-import { OrnamentalDivider } from '@/components/ui/OrnamentalDivider'
