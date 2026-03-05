@@ -1,6 +1,8 @@
 import type { Metadata } from 'next'
 import { Cormorant_Garamond, Libre_Baskerville, Special_Elite } from 'next/font/google'
 import './globals.css'
+import { Navigation } from '@/components/Navigation/Navigation'
+import { Footer } from '@/components/Footer'
 
 const cormorant = Cormorant_Garamond({
   subsets: ['latin'],
@@ -28,7 +30,11 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className={`${cormorant.variable} ${baskerville.variable} ${specialElite.variable}`}>
-      <body className="bg-cream text-ink font-body">{children}</body>
+      <body className="bg-cream text-ink font-body">
+        <Navigation />
+        <div className="pt-[72px]">{children}</div>
+        <Footer />
+      </body>
     </html>
   )
 }
