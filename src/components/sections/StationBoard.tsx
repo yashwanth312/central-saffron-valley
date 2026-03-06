@@ -1,3 +1,6 @@
+'use client'
+
+import { motion } from 'framer-motion'
 import { DepartureBoard } from '@/components/DepartureBoard/DepartureBoard'
 import { SectionHeading } from '@/components/ui/SectionHeading'
 
@@ -11,7 +14,13 @@ const hours = [
 export function StationBoard() {
   return (
     <section className="py-24 bg-navy bg-hatch">
-      <div className="max-w-2xl mx-auto px-6 text-center">
+      <motion.div
+        className="max-w-2xl mx-auto px-6 text-center"
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6 }}
+      >
         <SectionHeading
           subtitle="Schedule"
           title="The Station Board"
@@ -21,7 +30,7 @@ export function StationBoard() {
         <p className="font-stamp text-gold text-sm mt-8 tracking-widest">
           454 E 300 S · Salt Lake City, UT 84111 · (385) 267-1949
         </p>
-      </div>
+      </motion.div>
     </section>
   )
 }

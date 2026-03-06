@@ -3,7 +3,7 @@ import { test, expect } from '@playwright/test'
 
 test('homepage loads with hero content', async ({ page }) => {
   await page.goto('/')
-  await expect(page.getByText('Flavor, Story, Soul')).toBeVisible()
+  await expect(page.getByText('Where Every Meal is a Journey')).toBeVisible()
   await expect(page.getByRole('link', { name: /reserve/i }).first()).toBeVisible()
 })
 

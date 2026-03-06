@@ -1,8 +1,15 @@
 'use client'
 import Link from 'next/link'
+import Image from 'next/image'
 import { motion } from 'framer-motion'
 import { SectionHeading } from '@/components/ui/SectionHeading'
 import { diningSpaces } from '@/data/dining-spaces'
+
+const spaceImages: Record<string, string> = {
+  'main-floor': '/images/dining-space.jpg',
+  'mezzanine': '/images/private-events.jpg',
+  'platform-below': '/images/bar.jpg',
+}
 
 export function DiningSpaces() {
   return (
@@ -24,9 +31,13 @@ export function DiningSpaces() {
               {/* Compartment window frame */}
               <div className="aspect-[4/3] relative overflow-hidden">
                 <div className="absolute inset-0 bg-navy opacity-60 group-hover:opacity-20 transition-opacity duration-500 z-10" />
-                <div className="w-full h-full bg-navy flex items-center justify-center">
-                  <span className="text-gold font-stamp text-4xl opacity-30">◈</span>
-                </div>
+                <Image
+                  src={spaceImages[space.id] || space.image}
+                  alt={space.name}
+                  fill
+                  className="object-cover transition-transform duration-500 group-hover:scale-110"
+                  sizes="(max-width: 768px) 100vw, 33vw"
+                />
               </div>
 
               <div className="p-6 border-t border-gold">
